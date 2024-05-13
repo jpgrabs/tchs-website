@@ -1,20 +1,23 @@
 
   /* Custom Font */
-  @font-face {
-    font-family: 'Cardo';
-    src: local('./fonts/Cardo-Regular.ttf'), url('./fonts/Cardo-Regular.ttf') format('truetype');
-}
-
-
- /* Custom Font */
  @font-face {
-    font-family: 'myFirstFont';
-    src: local('./fonts/Maldina-Script.ttf'), url('./fonts/Maldina-Script.ttf') format('truetype');
+    font-family: 'tchs_font_cardo';
+    src:  url('https://fonts.googleapis.com/css?family=Cardo') format('woff2');
 }
 
 @font-face {
-    font-family: 'NeueEinstellung';
-    src: local('./fonts/NeueEinstellung-Regular.ttf'), url('./fonts/NeueEinstellung-Regular.ttf') format('truetype');
+    font-family: 'tchs_font_league_gothic';
+    src:  url('https://fonts.googleapis.com/css?family=League+Gothic') format('woff2');
+}
+
+ @font-face {
+    font-family: 'myFirstFont';
+    src: local('./fonts/Maldina-Script.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'wew';
+    src: local('neueeinstellungregular.ttf') format('truetype');
 }
 
 
@@ -113,35 +116,50 @@
 }
 
 .navbar-custom {
-    background-color: #C19E85; /* Change the background color */
+    background-image: url('../imgs/assets/navbar_background.png');
+    background-size: cover;
+    padding: 20px;
 }
 
 .navbar-custom .navbar-brand,
 .navbar-custom .navbar-nav .nav-link {
-    font-family: 'Cardo'; /* Use the custom font */
-    color: #596060; /* Change the text color */
+    font-family: 'tchs_font_cardo', serif;
+    color: #596060;
 }
 
 .navbar-custom .navbar-nav .nav-link:hover {
-    color: #bbb; /* Change the hover color */
+    color: #596060;
 }
 
 .navbar-custom .navbar-toggler-icon {
-    background-color: #596060; /* Change the toggler icon color */
+    background-color: #596060; 
 }
 .navbar-custom .navbar-nav .nav-item.active .nav-link {
-    color: #FAEFE0; /* Change the color of active navbar item */
+    color: #596060; 
 }
 .navbar-custom .navbar-brand img {
-    height: 60px; /* Adjust the height of the logo as needed */
-    width: 72px;
+    height: 70px; 
+    width: 120px;
     margin-right: 10px;
-    margin-bottom: -16px; /* Add some spacing between the logo and the text */
+    margin-bottom: -8px;
 }
 
-
+.fab {
+    color: #596060; 
+}
+.small-custom {
+    color: #596060;
+    font-family: 'tchs_font_cardo', serif;
+}
 /* End of navbar */
 
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../imgs/assets/navbar_background.png'); /* Replace 'background.jpg' with your image file path */
+    background-size: cover;
+    background-position: center;
+  }
 .gallery-home-img {
     height: 40%;
     width: 40%;
@@ -164,34 +182,54 @@
     height: 40%;
   }
 
+.carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: #ccc; /* Set the desired color */
+    border-radius: 50%; /* Make them circular */
+    transition: background-color 0.3s ease; /* Add a smooth transition */
+}
+.carousel-indicators .active {
+    background: white !important; /* Change the color as desired */
+}
+
   /* End of gallery home */
 
 .home-text-gallery-title {
-    font-family: 'myFirstFont'; /* Use the custom font */
-    color: #596060; /* Change the text color */
+    font-family: 'myFirstFont';
+    color: #596060;
     
-    font-weight: 400;
+    font-size: 24px;
+    font-weight: bold;
+    min-height: 20px;
+    height: auto;
     text-align: center;
+    max-height: 100%;
     word-wrap: break-word;
     text-overflow: ellipsis
 }
 .home-text-gallery-desc {
-    font-family: 'Cardo'; /* Use the custom font */
-    color: #9D9280; /* Change the text color */
-
-    font-weight: 400;
+    font-family: 'tchs_font_cardo'; 
+    color: #9D9280;
+    
+    font-size: 12px;
+    min-height: 20px;
+    height: auto;
+    text-align: center;
+    max-height: 100%;
     margin-top: -12px;
     word-wrap: break-word;
     text-overflow: ellipsis
 }
 /* // Mobile responsive */
-/* 
+
 @media screen and (max-width: 412px) {
     .home-text-gallery-title {
-        font-family: 'myFirstFont';
-        color: #596060;
+        font-family: 'myFirstFont'; /* Use the custom font */
+        color: #596060; /* Change the text color */
         
-        font-size: 27px;
+        font-size: px;
         font-weight: bold;
         min-height: 20px;
         height: auto;
@@ -200,5 +238,17 @@
         word-wrap: break-word;
         text-overflow: ellipsis
     }
- 
-} */
+    .home-text-gallery-desc {
+        font-family: 'Cardo'; /* Use the custom font */
+        color: #9D9280; /* Change the text color */
+        
+        font-size: 12px;
+        min-height: 20px;
+        height: auto;
+        text-align: center;
+        max-height: 100%;
+        margin-top: -12px;
+        word-wrap: break-word;
+        text-overflow: ellipsis
+    }
+}
