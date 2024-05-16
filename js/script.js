@@ -19,3 +19,28 @@ function includeHTML() {
 }
 
 window.onload = includeHTML;
+
+document.addEventListener('DOMContentLoaded', function () {
+    const thumbnails = document.querySelectorAll('.thumbnail');
+    const popup = document.getElementById('popup');
+    const popupImg = document.getElementById('popup-img');
+    const closeBtn = document.querySelector('.close');
+
+    thumbnails.forEach(thumbnail => {
+        thumbnail.addEventListener('click', function () {
+            const fullImgSrc = this.getAttribute('data-full');
+            popupImg.src = fullImgSrc;
+            popup.style.display = 'flex';
+        });
+    });
+
+    closeBtn.addEventListener('click', function () {
+        popup.style.display = 'none';
+    });
+
+    popup.addEventListener('click', function (e) {
+        if (e.target === popup) {
+            popup.style.display = 'none';
+        }
+    });
+});
