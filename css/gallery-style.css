@@ -69,3 +69,11 @@
   color: #555;
   font-size: 0.95rem;
 }
+.text-header-gallery-title {
+  width: 50%;
+  max-width: 200px; /* Adjust as needed */
+  height: auto;
+  display: block;
+  margin: 0 auto; /* center horizontally */
+}
+
