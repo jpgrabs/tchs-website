@@ -86,6 +86,14 @@
   top: 0;
 }
 
+.gallery-page {
+  background-image: url('../imgs/assets/navbar_background.png'); /* your actual image path */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; /* optional */
+}
+
   /* GALLERY GRID */
 .related-album-cover-img,
 .gallery-img {
