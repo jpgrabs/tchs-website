@@ -1,5 +1,93 @@
+.custom-navbar {
+  background-image: url('../imgs/assets/navbar_background-gallery.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  position: relative;
+  z-index: 0;
+}
+
+.custom-navbar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.custom-navbar > .container {
+  position: relative;
+  z-index: 2;
+}
+
+.custom-navbar .nav-link,
+.custom-navbar .navbar-brand {
+  color: white !important;
+}
+
+/* Wipe Bootstrap & browser default styles */
+.custom-toggler {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  padding: 0 !important;
+}
+
+/* Optional: Also remove focus ring on click */
+.custom-toggler:focus,
+.custom-toggler:active {
+  outline: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+
+/* Custom hamburger lines */
+.hamburger-icon {
+  position: relative;
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger-icon::before,
+.hamburger-icon::after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger-icon::before {
+  top: -8px;
+}
+
+.hamburger-icon::after {
+  top: 8px;
+}
+
+/* Toggle to "X" on open */
+.navbar-toggler[aria-expanded="true"] .hamburger-icon {
+  background-color: transparent;
+}
+.navbar-toggler[aria-expanded="true"] .hamburger-icon::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+.navbar-toggler[aria-expanded="true"] .hamburger-icon::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
   /* GALLERY GRID */
-  .related-album-cover-img,
+.related-album-cover-img,
 .gallery-img {
   width: 100%;
   aspect-ratio: 4 / 3;
@@ -76,4 +164,5 @@
   display: block;
   margin: 0 auto; /* center horizontally */
 }
+
 
