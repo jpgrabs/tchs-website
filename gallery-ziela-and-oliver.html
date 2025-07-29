@@ -42,10 +42,10 @@
     <!-- Menu -->
     <div class="collapse navbar-collapse justify-content-end" id="navbarMenu">
       <ul class="navbar-nav mb-2 mb-lg-0 gap-lg-4">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Album</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact</a></li>
+        <!-- <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li> -->
+        <li class="nav-item"><a class="nav-link" href="#prenup-section">Prenup</a></li>
+        <li class="nav-item"><a class="nav-link" href="#wedding-section">Wedding</a></li>
+        <li class="nav-item"><a class="nav-link" href="#sde-section">Same Day Edit (SDE)</a></li>
       </ul>
     </div>
   </div>
@@ -63,13 +63,6 @@
           Prenup and Wedding | June 2024
         </p>
         <p class="gallery-text-desc">
-          <br>They are the biggest gift to us in one of our hardest years as a start-up company.
-          <br>They came to us at a time when we weren't sure how to move forward. And with that, we will always be grateful that they shared with us one of their biggest achievements.
-          <br>Today marks one month after their big day.
-          <br>Let us join Ker and Glen as we celebrate love that lasts a lifetime.
-          <br>Let's witness this lovely couple's wedding highlights.
-          <br>Congratulations, Ker and Glen! 
-
           There's 50 percent chance that you'd meet your soulmate in your lifetime, and fifty percent that you won't.
           <br>Eight billion people—what are the odds that you'd fall for a stranger you've never met before? How could it be that someone you meet for the first time will hold the key to your heart?
           <br>𝑻𝒉𝒆 𝒂𝒏𝒔𝒘𝒆𝒓 𝒊𝒔 𝒔𝒊𝒎𝒑𝒍𝒆. 𝑰𝒕'𝒔 𝒍𝒐𝒗𝒆.
@@ -94,7 +87,7 @@
 
 
 <!-- Gallery Grid Prenup -->
-<div class="container my-5">
+<div class="container my-5" id="prenup-section">
   <div class="row g-4 gallery">
     <h2 class="mb-4 text-center">Prenup</h2>
     <div class="col-6 col-lg-4 gallery-item">
@@ -140,7 +133,7 @@
 </div>
 
 <!-- Gallery Grid Wedding -->
-<div class="container my-5">
+<div class="container my-5" id="wedding-section">
   <div class="row g-4 gallery">
     <h2 class="mb-4 text-center">Wedding</h2>
     <div class="col-6 col-lg-4 gallery-item">
@@ -192,7 +185,7 @@
   </div>
 
  <!-- Youtube Video related section -->
-  <div class="video-wrapper mx-auto">
+  <div class="video-wrapper mx-auto" id="sde-section">
     <div class="ratio ratio-16x9">
       <iframe 
         src="https://www.youtube.com/embed/iT9dM4Fje0w?si=q0dUviSH4sNclmgT" 
@@ -272,39 +265,15 @@
     </div>
   </div>
 </footer>
+
+<!-- Float Button -->
+<button id="backToTopBtn" class="btn btn-dark rounded-circle">
+  <i class="fas fa-chevron-up"></i>
+</button>
+
   <!-- Optional JS for Bootstrap -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- JS: Image popup -->
-  <script>
-    const popup = document.querySelector('.popup');
-    const popupImg = document.querySelector('.popup-content');
-    const closeBtn = document.querySelector('.close');
-    const galleryImages = document.querySelectorAll('.gallery-item img');
-
-    galleryImages.forEach(img => {
-      img.addEventListener('click', () => {
-        popup.style.display = 'flex';
-        popupImg.src = img.src;
-      });
-    });
-
-    closeBtn.addEventListener('click', () => {
-      popup.style.display = 'none';
-    });
-
-    popup.addEventListener('click', (e) => {
-      if (e.target === popup) {
-        popup.style.display = 'none';
-      }
-    });
-    
-     function toggleMobileMenu() {
-    const menu = document.getElementById('mobileMenu');
-    menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
-  }
-  </script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/gallery-script.js"></script>
 
 </body>
 </html>

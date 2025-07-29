@@ -42,10 +42,10 @@
     <!-- Menu -->
     <div class="collapse navbar-collapse justify-content-end" id="navbarMenu">
       <ul class="navbar-nav mb-2 mb-lg-0 gap-lg-4">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Album</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact</a></li>
+       <!-- <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li> -->
+        <li class="nav-item"><a class="nav-link" href="#prenup-section">Prenup</a></li>
+        <li class="nav-item"><a class="nav-link" href="#wedding-section">Wedding</a></li>
+        <li class="nav-item"><a class="nav-link" href="#sde-section">Same Day Edit (SDE)</a></li>
       </ul>
     </div>
   </div>
@@ -85,7 +85,7 @@
      class="img-fluid text-header-gallery-title"
      alt="Ver and Rica Header">
 <!-- Gallery Grid Prenup -->
-<div class="container my-5">
+<div class="container my-5" id="prenup-section">
   <div class="row g-4 gallery">
     <h2 class="mb-4 text-center">Prenup</h2>
     <div class="col-6 col-lg-4 gallery-item">
@@ -131,7 +131,7 @@
 </div>
 
   <!-- Gallery Grid -->
-<div class="container my-5">
+<div class="container my-5" id="wedding-section">
   <div class="row g-4 gallery">
     <h2 class="mb-4 text-center">Wedding</h2>
     <div class="col-6 col-lg-4 gallery-item">
@@ -184,7 +184,7 @@
   </div>
 
  <!-- Youtube Video related section -->
-  <div class="video-wrapper mx-auto">
+  <div class="video-wrapper mx-auto" id="sde-section">
     <div class="ratio ratio-16x9">
     <iframe src="https://www.youtube.com/embed/KaX_dIp2aSE?si=btq3lNovA4v8dopa&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
@@ -213,7 +213,7 @@
         <img src="imgs/gallery/jems and yen/jems-and-yem-cover.jpg" class="related-album-cover-img" alt="Related 3">
       </a>
       <p class="home-text-gallery-title fw-semibold mt-2">Yen and Jems</p>
-      <p class="gallery-text-desc">Wedding | January 2025</p>
+      <p class="gallery-text-desc">Wedding | February 2025</p>
     </div>
   </div>
 </div>
@@ -256,38 +256,14 @@
     </div>
   </div>
 </footer>
+<!-- Float Button -->
+<button id="backToTopBtn" class="btn btn-dark rounded-circle">
+  <i class="fas fa-chevron-up"></i>
+</button>
+
   <!-- Optional JS for Bootstrap -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- JS: Image popup -->
-  <script>
-    const popup = document.querySelector('.popup');
-    const popupImg = document.querySelector('.popup-content');
-    const closeBtn = document.querySelector('.close');
-    const galleryImages = document.querySelectorAll('.gallery-item img');
-
-    galleryImages.forEach(img => {
-      img.addEventListener('click', () => {
-        popup.style.display = 'flex';
-        popupImg.src = img.src;
-      });
-    });
-
-    closeBtn.addEventListener('click', () => {
-      popup.style.display = 'none';
-    });
-
-    popup.addEventListener('click', (e) => {
-      if (e.target === popup) {
-        popup.style.display = 'none';
-      }
-    });
-    
-     function toggleMobileMenu() {
-    const menu = document.getElementById('mobileMenu');
-    menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
-  }
-  </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/gallery-script.js"></script>
 
 
 </body>
