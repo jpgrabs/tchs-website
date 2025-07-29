@@ -152,7 +152,7 @@
 }
 
 .social-icons a:hover {
-  background-color: white;
+  background-color: gray;
   color: #C19E85; /* matches your footer background */
 }
 
